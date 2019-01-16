@@ -26,7 +26,7 @@ class UpdateRoleRequest extends FormRequest
 
         return [
             'display_name' => 'required|max:255',
-            'name' => 'required|max:100|alpha_dash|unique:roles' . $roleId,
+            'name' => 'required|max:100|alpha_dash|unique:roles,id,' . $roleId,
             'description' => 'sometimes|max:255',
         ];
     }
